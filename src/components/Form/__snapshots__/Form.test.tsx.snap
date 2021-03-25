@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`HueForm component component matches snapshot 1`] = `
+exports[`Form component component matches snapshot 1`] = `
 <styled.form
   onSubmit={[MockFunction]}
 >
@@ -11,7 +11,7 @@ exports[`HueForm component component matches snapshot 1`] = `
       type="text"
     />
   </styled.p>
-  <input
+  <styled.input
     type="submit"
     value="Submit"
   />

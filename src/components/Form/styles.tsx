@@ -13,6 +13,7 @@ export const StyledInput = styled.input`
     border-radius: 8px 0px 0px 8px;
     border: 1px solid #E7E7E7;
     font-family: 'Roboto' sans-serif;
+    font-size: 20px;
     height: 40px;
     padding: 4px 24px;
     width: 200px;
@@ -29,6 +30,7 @@ export const StyledSubmit = styled.input`
     background: #DCDCDC;
     border: 1px solid #E7E7E7;
     border-radius: 0px 8px 8px 0px;
+    font-size: 20px;
 `;
 
 export const StyledIcon = styled.span`

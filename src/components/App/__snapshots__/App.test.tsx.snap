@@ -2,10 +2,11 @@
 
 exports[`App component component matches snapshot 1`] = `
 <styled.div>
-  <HueForm
+  <Socials />
+  <Form
     onRandom={[Function]}
     onSubmit={[Function]}
   />
-  <styled.div />
+  <EmptyState />
 </styled.div>
 `;

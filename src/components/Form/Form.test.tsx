@@ -2,7 +2,7 @@ import { shallow } from 'enzyme';
 import Form from './component';
 import { StyledForm, StyledIcon } from './styles';
 
-describe('HueForm component', () => {
+describe('Form component', () => {
     const onRandom = jest.fn();
     const onSubmit = jest.fn();
     const event = {

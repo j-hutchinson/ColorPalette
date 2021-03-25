@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const StyledAppWrapper = styled.div`
     max-width: 1360px;
     margin: auto;
+    position: relative;
 `;
 
 export const StyledContainer = styled.div`
@@ -17,9 +18,14 @@ export const StyledContainer = styled.div`
 export const StyledItem = styled.div`
     background: ${(props: { hex: string }) => props.hex};
     border-radius: 20px;
+    box-shadow: 0 0 14px ${(props: { hex: string }) => props.hex};
     display: flex;
     flex-direction: column;
     height: 200px;
+
+    :hover {
+        box-shadow: 0 0 30px ${(props: { hex: string }) => props.hex};
+    }
 `;
 
 export const StyledText = styled.div`
@@ -36,4 +42,5 @@ export const StyledLabel = styled.p`
     color: black;
     margin: auto;
     font-size: 16px;
+    text-transform: uppercase;
 `;

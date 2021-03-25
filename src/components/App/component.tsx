@@ -1,5 +1,7 @@
 import { ChangeEvent, useState } from 'react';
-import HueForm from "../Form";
+import EmptyState from "../EmptyState";
+import Form from "../Form";
+import Socials from "../Socials";
 import { fetchColorNames } from '../data';
 import { colorPicker, randomHueNumber } from '../utils';
 import { Color } from '../types';
@@ -23,21 +25,25 @@ const App = (): JSX.Element => {
 
   return (
     <StyledAppWrapper>
-      <HueForm onRandom={onRandom} onSubmit={onSubmit} />
-      <StyledContainer>
-        {colors?.map((item, index) =>
-          <StyledItem key={index} hex={item.hex}>
-            <StyledText>
-              <StyledHeader>
-                {item.name}
-              </StyledHeader>
-              <StyledLabel>
-                {item.hex}
-              </StyledLabel>
-            </StyledText>
-          </StyledItem>
-        )}
-      </StyledContainer>
+      <Socials />
+      <Form onRandom={onRandom} onSubmit={onSubmit} />
+      {colors.length ?
+        <StyledContainer>
+          {colors.map((item, index) =>
+            <StyledItem key={index} hex={item.hex}>
+              <StyledText>
+                <StyledHeader>
+                  {item.name}
+                </StyledHeader>
+                <StyledLabel>
+                  {item.hex}
+                </StyledLabel>
+              </StyledText>
+            </StyledItem>)}
+        </StyledContainer>
+        :
+        <EmptyState />
+      }
     </StyledAppWrapper>
   )
 };
