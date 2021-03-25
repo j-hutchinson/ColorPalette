@@ -1,5 +1,9 @@
-# Jack Hutchinson's personal website
+# Jack Hutchinson's color palette
 
-Learn more about Jack Hutchinson, get in touch... say hello!
+Color palette generator app, generator a color scheme from a hue color.
+
+Coming soon...
+- generator from HEX
+- generator from RGB
 
 

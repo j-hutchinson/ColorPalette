@@ -22,14 +22,23 @@ Array [
 ]
 `;
 
+exports[`tokens colours 1`] = `
+Object {
+  "hover": "#78A5CE",
+  "jobTitle": "#878787",
+}
+`;
+
 exports[`tokens darkTheme 1`] = `
 Object {
   "background": "linear-gradient(to bottom right, #383838, #1E1E1E)",
   "border": "#EDEFE7",
   "fontColor": "white",
+  "highlight": "#5198db",
   "primaryBackground": "#222",
   "secondaryBackground": "radial-gradient(118.99% 670.46% at -7.06% -9.5%,#191919 0%,#0a0a0a 100%)",
   "sectionBackground": "radial-gradient(118.99% 670.46% at -7.06% -9.5%,#191919 0%,#0a0a0a 100%)",
+  "svgFill": "white",
 }
 `;
 
@@ -38,8 +47,10 @@ Object {
   "background": "linear-gradient(to bottom right, #EDEBEF, #A6A7A4)",
   "border": "#32342B",
   "fontColor": "black",
+  "highlight": "#3B68A9",
   "primaryBackground": "#eee",
   "secondaryBackground": "radial-gradient(118.99% 670.46% at -7.06% -9.5%,#FFFFFF 0%,#F1F1F1 100%)",
   "sectionBackground": "radial-gradient(118.99% 670.46% at -7.06% -9.5%,#FFFFFF 0%,#F1F1F1 100%)",
+  "svgFill": "black",
 }
 `;

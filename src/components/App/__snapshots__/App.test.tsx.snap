@@ -1,49 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App component component matches snapshot 1`] = `
-<Component
-  theme={
-    Object {
-      "background": "linear-gradient(to bottom right, #EDEBEF, #A6A7A4)",
-      "border": "#32342B",
-      "fontColor": "black",
-      "highlight": "#3B68A9",
-      "primaryBackground": "#eee",
-      "secondaryBackground": "radial-gradient(118.99% 670.46% at -7.06% -9.5%,#FFFFFF 0%,#F1F1F1 100%)",
-      "sectionBackground": "radial-gradient(118.99% 670.46% at -7.06% -9.5%,#FFFFFF 0%,#F1F1F1 100%)",
-      "svgFill": "black",
-    }
-  }
->
-  <Memo(l) />
-  <Toggle
-    toggleTheme={[Function]}
+<styled.div>
+  <HueForm
+    onRandom={[Function]}
+    onSubmit={[Function]}
   />
-  <Introduction />
-  <styled.main>
-    <JobSection
-      desc="Software developer specialising in front end web development utilising JavaScript, React, GraphQL, Docker and AWS. Responsible for Checkout.com's documentation and API Referencing"
-      link="https://checkout.com/"
-      name="Checkout.com"
-      startDate="04/01/21"
-      title="Senior Frontend Engineer"
-    />
-    <JobSection
-      desc="Organised and ran events as part of a team, mentoring a group of 15-20 people on how to start coding. Lead several sessions, working directly with students in 2 hour lessons split into lecture and practical application of concepts. Covering topics such as HTML, CSS, bootstrap, javascript and git."
-      endDate="04/20"
-      link="https://codefirstgirls.org.uk/"
-      name="Code First Girls"
-      startDate="01/20"
-      title="Instructor"
-    />
-    <JobSection
-      desc="Leading and designing the Front-end architecture within a cross-functional team developing a React web app and GraphQL service supporting multiple teams. Responsible for multiple micro-frontends supporting mendeley.com"
-      link="https://mendeley.com/search"
-      name="Mendeley / Elsevier"
-      startDate="04/09/17"
-      title="Graduate Engineer -> Frontend Engineer"
-    />
-    <ContactMe />
-  </styled.main>
-</Component>
+  <styled.div />
+</styled.div>
 `;
