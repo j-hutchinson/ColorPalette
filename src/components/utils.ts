@@ -9,7 +9,6 @@ export const colorPicker = (hue: number): string[] => {
     return scheme.colors();
 };
 
-
 export const randomHueNumber = () => {
     return Math.floor(Math.random() * (360 - 1 + 1) + 1);
 }

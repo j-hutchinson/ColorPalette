@@ -17,6 +17,7 @@ const StyledListItem = styled.li`
 `;
 
 const StyledLink = styled.a`
+    color: #3D3D3D;
     display: block;
     width: 33px;
     height: 33px;

@@ -9,11 +9,11 @@ import { StyledAppWrapper, StyledContainer, StyledHeader, StyledItem, StyledLabe
 
 const App = (): JSX.Element => {
   const [colors, setColors] = useState<Color[]>([]);
+  const [showAtIndex, setShowAtIndex] = useState<number>(null);
 
-  const onSubmit = async (ev: ChangeEvent<HTMLInputElement>): Promise<void> => {
+  const onSubmit = async (ev: ChangeEvent<HTMLInputElement>, input: number): Promise<void> => {
     ev.preventDefault();
-
-    const value = colorPicker(21).slice(0, 9).join(',');
+    const value = colorPicker(input).slice(0, 9).join(',');
     await fetchColorNames(value).then(resp => setColors(resp));
   }
 
@@ -23,6 +23,14 @@ const App = (): JSX.Element => {
     await fetchColorNames(value).then(resp => setColors(resp));
   }
 
+  const onItemClick = (index) => {
+    if (showAtIndex === index) {
+      setShowAtIndex(null);
+    } else {
+      setShowAtIndex(index)
+    }
+  }
+
   return (
     <StyledAppWrapper>
       <Socials />
@@ -30,13 +38,23 @@ const App = (): JSX.Element => {
       {colors.length ?
         <StyledContainer>
           {colors.map((item, index) =>
-            <StyledItem key={index} hex={item.hex}>
+            <StyledItem key={index} hex={item.hex} onClick={() => onItemClick(index)} zoomIn={showAtIndex === index}>
               <StyledText>
                 <StyledHeader>
                   {item.name}
                 </StyledHeader>
                 <StyledLabel>
-                  {item.hex}
+                  {
+                    showAtIndex === index &&
+                    (<>
+                      <p>
+                        {item.hex}
+                      </p>
+                      <p>
+                        {`rgb(${item.rgb.r}, ${item.rgb.g}, ${item.rgb.b})`}
+                      </p>
+                    </>)
+                  }
                 </StyledLabel>
               </StyledText>
             </StyledItem>)}
